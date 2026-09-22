@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0f380f" />
+  <meta name="description" content="MENOCLONE Gaming presents Signal Lost — a Game Boy-inspired RPG currently in development." />
+  <title>MENOCLONE Gaming — Signal Lost</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="brand-header">
+    <img src="assets/menoclone-wordmark.png" alt="MENOCLONE" class="brand-logo" />
+    <p class="eyebrow">MNC GAMING // SIGNAL LOST // 2027</p>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">ORIGINALITY HAS ORIGINS.</p>
+        <h1 id="hero-title">SIGNAL LOST</h1>
+        <p class="lede">An exploration RPG built around lost transmissions, strange neighborhoods, hidden symbols, and the MENOCLONE UFO signal.</p>
+        <p class="instruction">Use the Game Boy controls. <strong>D-Pad</strong> navigates, <strong>A</strong> selects, <strong>B</strong> goes back, and <strong>START</strong> launches the playable signal demo.</p>
+      </div>
+
+      <div class="gameboy-wrap">
+        <div class="gameboy" aria-label="Interactive MENOCLONE Game Boy interface">
+          <div class="top-ridge" aria-hidden="true"></div>
+          <div class="screen-bezel">
+            <div class="bezel-copy top">DOT MATRIX WITH STEREO SOUND</div>
+            <div class="power-wrap"><span class="power-light"></span><span>BATTERY</span></div>
+            <div class="lcd" id="lcd" tabindex="0" aria-live="polite">
+              <div class="lcd-glare" aria-hidden="true"></div>
+              <div class="scanlines" aria-hidden="true"></div>
+              <div id="screen" class="screen-content"></div>
+            </div>
+          </div>
+
+          <div class="device-brand"><span>MENOCLONE</span><small>DMG-MNC</small></div>
+
+          <div class="controls" aria-label="Game controls">
+            <div class="dpad" aria-label="Directional pad">
+              <button class="pad up" data-key="up" aria-label="Up">▲</button>
+              <button class="pad left" data-key="left" aria-label="Left">◀</button>
+              <span class="pad center" aria-hidden="true"></span>
+              <button class="pad right" data-key="right" aria-label="Right">▶</button>
+              <button class="pad down" data-key="down" aria-label="Down">▼</button>
+            </div>
+
+            <div class="ab-wrap">
+              <button class="action b" data-key="b" aria-label="B button">B</button>
+              <button class="action a" data-key="a" aria-label="A button">A</button>
+              <span class="ab-label">B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</span>
+            </div>
+          </div>
+
+          <div class="system-buttons">
+            <button class="pill" data-key="select">SELECT</button>
+            <button class="pill" data-key="start">START</button>
+          </div>
+
+          <div class="speaker" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="phones">◖PHONES◗</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="transmission" id="transmission">
+      <div class="section-heading">
+        <p class="kicker">PROJECT TRANSMISSION</p>
+        <h2>Lost signal. Found world.</h2>
+      </div>
+      <div class="grid">
+        <article class="card"><span>01</span><h3>Explore</h3><p>Roam interconnected city blocks, rooftops, tunnels, stores, skate spots, and strange signal zones.</p></article>
+        <article class="card"><span>02</span><h3>Collect</h3><p>Recover signal fragments, tags, tapes, clues, and MENOCLONE artifacts that unlock new routes and transmissions.</p></article>
+        <article class="card"><span>03</span><h3>Investigate</h3><p>Talk to characters, inspect the environment, decode visual clues, and learn why the broadcast disappeared.</p></article>
+        <article class="card"><span>04</span><h3>Survive</h3><p>Navigate hazards and encounters while deciding which signals to follow — and which ones are traps.</p></article>
+      </div>
+    </section>
+
+    <section class="poster-section">
+      <div class="poster-copy">
+        <p class="kicker">DEVELOPMENT FILE // GB-001</p>
+        <h2>Designed in the DMG language.</h2>
+        <p>The visual system is locked to the four-color Game Boy palette: <strong>#9BBC0F</strong>, <strong>#8BAC0F</strong>, <strong>#306230</strong>, and <strong>#0F380F</strong>. The experience is being built mobile-first, with the handheld itself acting as the primary navigation system.</p>
+        <p class="status"><span class="blink"></span> IN DEVELOPMENT — TARGET 2027</p>
+      </div>
+      <img src="assets/signal-lost-concept.png" alt="Signal Lost Game Boy visual development sheet" class="concept-art" />
+    </section>
+  </main>
+
+  <footer>
+    <span>MENOCLONE GAMING</span>
+    <span>ORIGINALITY HAS ORIGINS.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
