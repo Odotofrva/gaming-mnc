@@ -3,101 +3,122 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#0f380f" />
-  <meta name="description" content="MENOCLONE Gaming presents Signal Lost — a Game Boy-inspired RPG currently in development." />
-  <title>MENOCLONE Gaming — Signal Lost</title>
+  <meta name="theme-color" content="#050608" />
+  <meta name="description" content="MENOCLONE Gaming presents REALMS OF SE7EN — a futuristic universe where exploration, progression, digital finds and physical MENOCLONE products collide." />
+  <title>MENOCLONE Gaming — REALMS OF SE7EN</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-
-  <header class="brand-header">
-    <img src="assets/menoclone-wordmark.png" alt="MENOCLONE" class="brand-logo" />
-    <p class="eyebrow">MNC GAMING // SIGNAL LOST // 2027</p>
-  </header>
-
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="kicker">ORIGINALITY HAS ORIGINS.</p>
-        <h1 id="hero-title">SIGNAL LOST</h1>
-        <p class="lede">Signal Lost is a retro Game Boy RPG where players explore a strange, disconnected world filled with hidden signals, mysterious characters, and MENOCLONE-inspired locations. Your mission is to investigate the unknown, recover lost transmissions, collect clues, and uncover what caused the signal to disappear.</p>
-        <p class="instruction">Use the Game Boy controls. <strong>D-Pad</strong> navigates, <strong>A</strong> selects, <strong>B</strong> goes back, and <strong>START</strong> launches a playable game of MENOCLONE until our beta for "Signal Lost" is released.</p>
+  <div id="boot" class="boot" aria-label="MENOCLONE 16-bit boot screen">
+    <div class="boot-console">
+      <div class="boot-screen">
+        <div class="scan"></div>
+        <p class="boot-kicker">MENOCLONE 16-BIT SYSTEM</p>
+        <h1>REALMS<br><span>OF SE7EN</span></h1>
+        <div class="boot-orbit"><span></span><i></i></div>
+        <p id="bootStatus">INITIALIZING REALMS...</p>
+        <div class="boot-bar"><b></b></div>
+        <button id="enterSite" type="button">PRESS START</button>
       </div>
+      <div class="console-controls" aria-hidden="true">
+        <div class="dpad"><i></i><i></i></div>
+        <div class="console-mark">MNC // GEN-7</div>
+        <div class="ab"><b>A</b><b>B</b></div>
+      </div>
+    </div>
+    <p class="boot-tip">Tap START to enter // auto launch enabled</p>
+  </div>
 
-      <div class="gameboy-wrap">
-        <div class="gameboy" aria-label="Interactive MENOCLONE Game Boy interface">
-          <div class="top-ridge" aria-hidden="true"></div>
-          <div class="screen-bezel">
-            <div class="bezel-copy top">DOT MATRIX WITH STEREO SOUND</div>
-            <div class="power-wrap"><span class="power-light"></span><span>BATTERY</span></div>
-            <div class="lcd" id="lcd" tabindex="0" aria-live="polite">
-              <div class="lcd-glare" aria-hidden="true"></div>
-              <div class="scanlines" aria-hidden="true"></div>
-              <div id="screen" class="screen-content"></div>
-            </div>
+  <div id="site" class="site is-hidden">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="MENOCLONE Gaming home">MENOCLONE<span>GAMING</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav">MENU</button>
+      <nav id="nav">
+        <a href="#overview">GAME</a><a href="#systems">SYSTEMS</a><a href="#gallery">DEV FILES</a><a href="#beta">BETA</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">MNC GAMING // KICKSTARTER PROJECT // IN DEVELOPMENT</p>
+          <h1>REALMS<br><em>OF SE7EN</em></h1>
+          <p class="lede">Enter a connected universe of seven realms. Fly between worlds, unlock new routes, discover rare digital products, and progress deeper into the MENOCLONE universe.</p>
+          <div class="hero-actions">
+            <a class="cta" href="#overview">ENTER THE REALMS</a>
+            <a class="ghost" href="#beta">BETA PROGRAM SOON</a>
           </div>
-
-          <div class="device-brand"><span>MENOCLONE</span><small>DMG-MNC</small></div>
-
-          <div class="controls" aria-label="Game controls">
-            <div class="dpad" aria-label="Directional pad">
-              <button class="pad up" data-key="up" aria-label="Up">▲</button>
-              <button class="pad left" data-key="left" aria-label="Left">◀</button>
-              <span class="pad center" aria-hidden="true"></span>
-              <button class="pad right" data-key="right" aria-label="Right">▶</button>
-              <button class="pad down" data-key="down" aria-label="Down">▼</button>
-            </div>
-
-            <div class="ab-wrap">
-              <button class="action b" data-key="b" aria-label="B button">B</button>
-              <button class="action a" data-key="a" aria-label="A button">A</button>
-              <span class="ab-label">B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</span>
-            </div>
-          </div>
-
-          <div class="system-buttons">
-            <button class="pill" data-key="select">SELECT</button>
-            <button class="pill" data-key="start">START</button>
-          </div>
-
-          <div class="speaker" aria-hidden="true">
-            <span></span><span></span><span></span><span></span><span></span><span></span>
-          </div>
-          <div class="phones">◖PHONES◗</div>
+          <div class="signal-row"><span>7 REALMS</span><span>RARE DROPS</span><span>PHYSICAL + DIGITAL</span></div>
         </div>
-      </div>
-    </section>
+        <div class="hero-art reveal">
+          <img src="assets/realms-cover.png" alt="REALMS OF SE7EN concept game cover" />
+          <div class="hud-tag">BUILD // PRE-ALPHA</div>
+        </div>
+      </section>
 
-    <section class="transmission" id="transmission">
-      <div class="section-heading">
-        <p class="kicker">PROJECT TRANSMISSION</p>
-        <h2>Lost signal. Found world.</h2>
-      </div>
-      <div class="grid">
-        <article class="card"><span>01</span><h3>Explore</h3><p>Roam interconnected city blocks, rooftops, tunnels, stores, skate spots, and strange signal zones.</p></article>
-        <article class="card"><span>02</span><h3>Collect</h3><p>Recover signal fragments, tags, tapes, clues, and MENOCLONE artifacts that unlock new routes and transmissions.</p></article>
-        <article class="card"><span>03</span><h3>Investigate</h3><p>Talk to characters, inspect the environment, decode visual clues, and learn why the broadcast disappeared.</p></article>
-        <article class="card"><span>04</span><h3>Survive</h3><p>Navigate hazards and encounters while deciding which signals to follow — and which ones are traps.</p></article>
-      </div>
-    </section>
+      <section id="overview" class="section intro reveal">
+        <p class="section-code">01 // TRANSMISSION</p>
+        <div class="split">
+          <h2>PLAY THE UNIVERSE.<br><span>FIND WHAT OTHERS MISS.</span></h2>
+          <div>
+            <p><strong>REALMS OF SE7EN</strong> is being built around exploration, discovery and progression. Players travel across seven distinct worlds using the MENOCLONE craft, searching environments for digital products, hidden releases and rare unlocks that become available as progression grows.</p>
+            <p>The experience also connects the game world to real MENOCLONE products. When eligible physical products are purchased through the game, the item is shipped to the player in the real world — bringing the digital universe and the MENOCLONE lifestyle together in a new way.</p>
+          </div>
+        </div>
+      </section>
 
-    <section class="poster-section">
-      <div class="poster-copy">
-        <p class="kicker">DEVELOPMENT FILE // GB-001</p>
-        <h2>Designed in the DMG language.</h2>
-        <p><strong>Signal Lost</strong> is a retro Game Boy RPG where players explore a strange, disconnected world filled with hidden signals, mysterious characters, and MENOCLONE-inspired locations. Your mission is to investigate the unknown, recover lost transmissions, collect clues, and uncover what caused the signal to disappear.</p>
-        <p class="status"><span class="blink"></span> IN DEVELOPMENT — TARGET 2027</p>
-      </div>
-      <img src="assets/signal-lost-concept.png" alt="Signal Lost Game Boy visual development sheet" class="concept-art" />
-    </section>
-  </main>
+      <section id="systems" class="systems section reveal">
+        <p class="section-code">02 // CORE SYSTEMS</p>
+        <div class="system-grid">
+          <article><span>01</span><h3>TRAVEL</h3><p>Power the craft, select a realm and move through the universe as new destinations become available.</p></article>
+          <article><span>02</span><h3>DISCOVER</h3><p>Search for digital items, hidden drops and rare products placed throughout the realms.</p></article>
+          <article><span>03</span><h3>UNLOCK</h3><p>Progression opens new items, routes, experiences and hard-to-find MENOCLONE releases.</p></article>
+          <article><span>04</span><h3>OWN</h3><p>Selected physical products purchased in-game are fulfilled and shipped to the player.</p></article>
+        </div>
+      </section>
 
-  <footer>
-    <span>MENOCLONE GAMING</span>
-    <span>ORIGINALITY HAS ORIGINS.</span>
-  </footer>
+      <section class="key-section section reveal">
+        <div class="key-copy">
+          <p class="section-code">03 // ACCESS PROTOCOL</p>
+          <h2>THE KEYCARD STARTS THE GAME.</h2>
+          <p>Your access key is more than a visual. It represents entry into the seven-realm network and the first step toward activating your craft, reading the universe map and beginning your progression.</p>
+          <div class="micro">MNC_ACCESS_KEY // REALMS 07 // MODE: TRAVEL</div>
+        </div>
+        <img src="assets/keycard.png" alt="MENOCLONE Universe Access Key for REALMS OF SE7EN" />
+      </section>
 
+      <section id="gallery" class="section reveal">
+        <p class="section-code">04 // DEVELOPMENT FILES</p>
+        <div class="gallery-head"><h2>FROM CONCEPT TO COCKPIT.</h2><p>Current visual direction and development snapshots from the REALMS OF SE7EN project.</p></div>
+        <div class="gallery">
+          <figure class="cover"><img src="assets/realms-cover.png" alt="REALMS OF SE7EN game cover concept"><figcaption><b>GAME COVER</b><span>REALMS OF SE7EN // MNC GAMING</span></figcaption></figure>
+          <figure><img src="assets/cockpit.png" alt="Futuristic cockpit interior for REALMS OF SE7EN"><figcaption><b>COCKPIT</b><span>PLAYER VIEW // SHIP INTERFACE</span></figcaption></figure>
+          <figure><img src="assets/keycard.png" alt="MENOCLONE game access keycard"><figcaption><b>ACCESS KEY</b><span>GAME START // REALM MAP</span></figcaption></figure>
+          <figure><img src="assets/developer-screen.png" alt="Blender development screenshot showing REALMS OF SE7EN environment work"><figcaption><b>DEVELOPER SCREEN</b><span>WORLD BUILDING // BLENDER</span></figcaption></figure>
+        </div>
+      </section>
+
+      <section id="beta" class="beta section reveal">
+        <div class="beta-ring"></div>
+        <p class="section-code">05 // BETA TRANSMISSION</p>
+        <p class="beta-badge">COMING SOON</p>
+        <h2>MENOCLONE GAMING<br>BETA TESTER PROGRAM</h2>
+        <p>We are preparing a beta game tester program for players who want an early look at the universe and the opportunity to help shape the experience. Tester details, requirements and application information will be announced soon.</p>
+        <button type="button" id="notifyBtn" class="cta">BETA SIGNAL: STANDBY</button>
+        <small id="notifyMsg">Stay tuned for the official launch announcement.</small>
+      </section>
+
+      <section class="kick section reveal">
+        <p class="section-code">06 // KICKSTARTER STATUS</p>
+        <h2>THIS UNIVERSE IS JUST OPENING.</h2>
+        <p>REALMS OF SE7EN is a MENOCLONE Kickstarter project currently in development. More gameplay systems, realm reveals, product mechanics, beta details and development updates are on the way.</p>
+        <div class="ticker"><span>STAY TUNED // ORIGINALITY HAS ORIGINS // REALMS OF SE7EN // MENOCLONE GAMING // </span><span>STAY TUNED // ORIGINALITY HAS ORIGINS // REALMS OF SE7EN // MENOCLONE GAMING // </span></div>
+      </section>
+    </main>
+
+    <footer><strong>MENOCLONE GAMING</strong><span>REALMS OF SE7EN</span><span>ORIGINALITY HAS ORIGINS.</span></footer>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
