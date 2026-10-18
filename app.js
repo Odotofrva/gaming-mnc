@@ -12,11 +12,11 @@ const baseLook=new THREE.Vector3(0,.2,0);camera.position.set(0,1.85,3.6);camera.
 const loader=new GLTFLoader();
 function load(url){return new Promise((resolve,reject)=>loader.load(url,g=>resolve(g.scene),undefined,reject))}
 function normalize(obj,target){const box=new THREE.Box3().setFromObject(obj);const size=box.getSize(new THREE.Vector3());const center=box.getCenter(new THREE.Vector3());obj.position.sub(center);obj.scale.multiplyScalar(target/Math.max(size.x,size.y,size.z));return obj}
-async function setup(){try{status.textContent='ARRIVING AT NEON CITADEL CRYSTAL...';const platform=await load('assets/Meshy_AI_Neon_Citadel_Crystal_1018164145_texture.glb');normalize(platform,9);nexus.add(platform); // platform below and around camera
+async function setup(){try{status.textContent='ARRIVING AT EMERALD SKY NEXUS...';const platform=await load('assets/Meshy_AI_Emerald_Sky_Nexus_1018164348_texture(1).glb');normalize(platform,9);nexus.add(platform); // platform below and around camera
 // The camera is fixed near one of the elevated decks, with the structure ahead.
 camera.position.set(0,2.25,5.5);baseLook.set(0,.5,0);camera.lookAt(baseLook);
 status.textContent='LOCATING YOUR CRAFT...';try{cruiser=await load('assets/Meshy_AI_Neon_Disc_Cruiser_1018163656_texture.glb');normalize(cruiser,1.55);cruiser.position.set(2.2,1.65,-.6);scene.add(cruiser)}catch(e){console.warn('Craft unavailable',e)}
-status.textContent='NEON CITADEL ONLINE // READY TO ENTER';button.disabled=false;button.textContent='ENTER';}catch(err){console.error(err);status.textContent='3D WORLD UNAVAILABLE // ENTER SITE';button.disabled=false;button.textContent='ENTER';}}
+status.textContent='EMERALD SKY NEXUS ONLINE // READY TO ENTER';button.disabled=false;button.textContent='ENTER';}catch(err){console.error(err);status.textContent='3D WORLD UNAVAILABLE // ENTER SITE';button.disabled=false;button.textContent='ENTER';}}
 let mouseX=0,mouseY=0;addEventListener('pointermove',e=>{mouseX=e.clientX/innerWidth-.5;mouseY=e.clientY/innerHeight-.5},{passive:true});let tick=0;
 function animate(){if(!boot.classList.contains('is-hidden')){tick+=.008;camera.position.x+=(mouseX*.4-camera.position.x)*.018;camera.lookAt(baseLook.x+mouseX*.3,baseLook.y-mouseY*.18,baseLook.z);if(cruiser){cruiser.position.y=1.65+Math.sin(tick*2)*.12;cruiser.rotation.y+=.0018}renderer.render(scene,camera)}requestAnimationFrame(animate)}animate();setup();
 addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
