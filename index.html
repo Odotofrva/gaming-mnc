@@ -9,24 +9,18 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="boot" class="boot" aria-label="MENOCLONE 16-bit boot screen">
-    <div class="boot-console">
-      <div class="boot-screen">
-        <div class="scan"></div>
-        <p class="boot-kicker">MENOCLONE 16-BIT SYSTEM</p>
-        <h1>REALMS<br><span>OF SE7EN</span></h1>
-        <div class="boot-orbit"><span></span><i></i></div>
-        <p id="bootStatus">INITIALIZING REALMS...</p>
-        <div class="boot-bar"><b></b></div>
-        <button id="enterSite" type="button">PRESS START</button>
-      </div>
-      <div class="console-controls" aria-hidden="true">
-        <div class="dpad"><i></i><i></i></div>
-        <div class="console-mark">MNC // GEN-7</div>
-        <div class="ab"><b>A</b><b>B</b></div>
-      </div>
+  <div id="boot" class="world-entry" aria-label="MENOCLONE 3D arrival experience">
+    <div id="arrivalCanvas" aria-hidden="true"></div>
+    <div class="arrival-vignette"></div>
+    <div class="arrival-top"><span>REALMS OF SE7EN</span><span>ARRIVAL // CRYSTAL PLATFORM</span></div>
+    <div class="arrival-content">
+      <p class="arrival-eyebrow">SIGNAL FOUND // WELCOME TO THE REALMS</p>
+      <h1 class="arrival-logo">MENOCLONE<span>GAMING</span></h1>
+      <p class="arrival-sub">ORIGINALITY HAS ORIGINS.</p>
+      <button id="enterSite" type="button" disabled>LOADING WORLD...</button>
+      <p id="bootStatus" role="status">PREPARING YOUR LANDING</p>
     </div>
-    <p class="boot-tip">Tap START to enter // auto launch enabled</p>
+    <div class="arrival-bottom"><span>NEON CITADEL CRYSTAL // PLATFORM ACCESS</span><span>SCROLL TO EXPLORE • ENTER TO CONTINUE</span></div>
   </div>
 
   <div id="site" class="site is-hidden">
@@ -119,6 +113,8 @@
 
     <footer><strong>MENOCLONE GAMING</strong><span>REALMS OF SE7EN</span><span>ORIGINALITY HAS ORIGINS.</span></footer>
   </div>
-  <script src="app.js"></script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"}}</script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"}}</script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
